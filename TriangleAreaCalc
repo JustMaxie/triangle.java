@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class TriangleAreaCalculator {
+    public static void main(String[] args) {
+        TriangleAreaCalculator calculator = new TriangleAreaCalculator();
+        calculator.run();
+    }
+
+    private void run() {
+        double base = askForBase();
+        double height = askForHeight();
+        double area = calculateArea(base, height);
+        displayArea(area);
+    }
+
+    private double askForBase() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the base of the triangle:");
+        return scanner.nextDouble();
+    }
+
+    private double askForHeight() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the height of the triangle:");
+        return scanner.nextDouble();
+    }
+
+    private double calculateArea(double base, double height) {
+        return 0.5 * base * height;
+    }
+
+    private void displayArea(double area) {
+        System.out.println("The calculated area of the triangle is: " + area);
+    }
+}
